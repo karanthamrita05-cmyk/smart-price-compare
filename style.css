@@ -1,0 +1,83 @@
+:root{
+  --bg1:#667eea;
+  --bg2:#764ba2;
+  --accent:#ffcc70;
+  --text:#111;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,var(--bg1),var(--bg2));
+  color:#fff;
+  min-height:100vh;
+}
+
+/* container */
+.container{max-width:1000px;margin:0 auto;padding:0 18px}
+
+/* NAV */
+.nav{background:rgba(0,0,0,0.25);backdrop-filter:blur(6px)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{font-weight:700;letter-spacing:0.5px;color:#fff;text-decoration:none}
+.logo span{color:var(--accent)}
+.nav-links{list-style:none;display:flex;margin:0;padding:0}
+.nav-links li{margin-left:18px}
+.nav-links a{color:#fff;text-decoration:none;font-weight:500}
+.nav-links a:hover{color:var(--accent)}
+
+/* HERO */
+.hero{padding:80px 0 60px;text-align:center}
+.hero-inner h1{font-size:2.4rem;margin:0 0 10px}
+.hero-inner h1 span{background:rgba(255,255,255,0.08);padding:6px 10px;border-radius:8px}
+.hero-inner p{opacity:0.95}
+.hero-actions{margin-top:18px}
+.btn{display:inline-block;padding:10px 20px;border-radius:24px;background:var(--accent);color:#111;font-weight:700;text-decoration:none;margin-right:10px}
+.btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.12)}
+.btn:hover{filter:brightness(1.05)}
+
+/* PAGE wrapper */
+.page{padding:28px 0;background:rgba(255,255,255,0.04);border-radius:10px;margin:24px 0}
+
+/* CARDS */
+.card{background:rgba(0,0,0,0.18);padding:18px;border-radius:10px;margin-bottom:14px}
+.card h3{margin-top:0}
+
+/* TABLE */
+.table-wrap{overflow:auto;margin-top:8px}
+table{width:100%;border-collapse:collapse;background:rgba(255,255,255,0.02)}
+th,td{padding:12px 10px;text-align:left}
+thead th{opacity:0.9;border-bottom:1px solid rgba(255,255,255,0.06)}
+tbody tr:nth-child(even){background:rgba(255,255,255,0.02)}
+.price.best{background:linear-gradient(90deg,#113344, #1b3b5a);border-radius:8px;color:var(--accent);font-weight:700;position:relative;padding:10px}
+
+/* best deal badge (in JS we inject) */
+.best-badge{
+  display:inline-block;
+  margin-left:8px;
+  background:var(--accent);
+  color:#111;
+  font-weight:700;
+  padding:4px 8px;
+  border-radius:12px;
+  font-size:0.75rem;
+}
+
+/* search */
+.search-row{display:flex;justify-content:flex-end;margin-bottom:8px}
+#searchBox{padding:8px 12px;border-radius:8px;border:0;outline:none;min-width:220px}
+
+/* contact form */
+.contact-form{display:flex;flex-direction:column;gap:10px;max-width:520px}
+.contact-form input,.contact-form textarea{padding:10px;border-radius:8px;border:0;outline:none}
+.hidden{display:none}
+
+/* footer */
+.footer{padding:20px 0;text-align:center;color:rgba(255,255,255,0.85)}
+
+/* responsive */
+@media (max-width:700px){
+  .nav-inner{flex-direction:column;gap:10px}
+  .nav-links{flex-wrap:wrap;justify-content:center}
+  .hero-inner h1{font-size:1.6rem}
+}
